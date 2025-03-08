@@ -9,5 +9,15 @@ class Square(Shape):
     def area(self):
         return self.length * self.length
 
-s = Square(5)
-print(f"Area of square: {s.area()}")
+def main():
+    # Taking input from the user
+    length = float(input("Enter the length of the square: "))
+
+    # Creating a Square object
+    square = Square(length)
+
+    # Displaying the area
+    print(f"Area of the square: {square.area()}")
+
+if __name__ == "__main__":
+    main()

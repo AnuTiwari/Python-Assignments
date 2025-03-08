@@ -15,8 +15,24 @@ class Time:
     def displayMinute(self):
         print(f"Total minutes: {self.hours * 60 + self.minutes}")
 
-t1 = Time(2, 50)
-t2 = Time(1, 20)
-t3 = t1.addTime(t2)
-t3.displayTime()
-t3.displayMinute()
+def main():
+    # Taking input from the user for the first time object
+    h1 = int(input("Enter hours for first time: "))
+    m1 = int(input("Enter minutes for first time: "))
+    t1 = Time(h1, m1)
+
+    # Taking input from the user for the second time object
+    h2 = int(input("Enter hours for second time: "))
+    m2 = int(input("Enter minutes for second time: "))
+    t2 = Time(h2, m2)
+
+    # Adding both time objects
+    t3 = t1.addTime(t2)
+
+    # Displaying results
+    print("\nSum of time:")
+    t3.displayTime()
+    t3.displayMinute()
+
+if __name__ == "__main__":
+    main()
